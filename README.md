@@ -23,3 +23,6 @@ The tools include:
   - Convert to datatype date: `df.withColumn("col", to_date("col","m/d/yyyy"))`
   - `df.withColumn("Year", year("col"))`
   - Round values: `df.withColumn("col1", round(col1,2))`
+  - Join datasets: `data = df1.join(df2, how = "inner", on = ["col_name"])`
+  - Struct - aggregate within aggregate: `df.groupBy("col_name").agg(max(struct(col("count"), col("genre"))).alias("col_name_new")`
+  - Convert dataframe `df` to a list: `df.collect`, then can save the column in an array: `var = [row["col_name"] for row in df]`

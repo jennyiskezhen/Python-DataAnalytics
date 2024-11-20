@@ -26,3 +26,14 @@ The tools include:
   - Join datasets: `data = df1.join(df2, how = "inner", on = ["col_name"])`
   - Struct - aggregate within aggregate: `df.groupBy("col_name").agg(max(struct(col("count"), col("genre"))).alias("col_name_new")`
   - Convert dataframe `df` to a list: `df.collect`, then can save the column in an array: `var = [row["col_name"] for row in df]`
+
+- Keras library for API for DL
+  - `input = Input(shape = (col_num,))`
+  - `hidden_layer = Dense(64, activation = 'relu')(input)`
+  - `output = Dense(1, activation = 'sigmoid')(hidden_layer)`
+  - `Dropout(rate=0.5)(hidden_layer)`
+  - `BatchNormalization()(hidden_layer)`
+  - `model = Model()`
+  - `model.compile()`
+  - `model.fit()`
+  - `model.evaluation()`

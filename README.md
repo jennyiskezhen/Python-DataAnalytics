@@ -37,3 +37,4 @@ The tools include:
   - `model.compile()`
   - `model.fit()`
   - `model.evaluation()`
+  - Define a custom layer using `__init__()`, `build()`, and `call()`. Create the layer using `Sequential()`.
